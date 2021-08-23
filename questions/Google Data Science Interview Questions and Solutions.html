@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Google Data Science Interview Questions and Solutions</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.css">
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=24bf54caf4" />
+    <style>
+        .toc {
+            position: fixed;
+            top: 100px;
+            right: 0;
+            width: 250px;
+            font-size: .8em;
+        }
+
+        ol.toc-list {
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        @media (max-width: 1170px) {
+            .toc {
+            display:none;
+            }
+        }
+    </style>
+    <meta name="description" content="Google asks about 5+ different topics in data science spanning machine learning, statistics &amp; probability, product &amp; business, and coding." />
+    <link rel="canonical" href="https://www.interviewquery.com/blog-google-data-science-interview-questions-and-solutions" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://blog.interviewquery.com/blog-google-data-science-interview-questions-and-solutions/amp/" />
+    
+    <meta property="og:site_name" content="Interview Query Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Google Data Science Interview Questions and Solutions" />
+    <meta property="og:description" content="Google asks about 5+ different topics in data science spanning machine learning, statistics &amp; probability, product &amp; business, and coding." />
+    <meta property="og:url" content="https://www.interviewquery.com/blog-google-data-science-interview-questions-and-solutions" />
+    <meta property="og:image" content="https://blog.interviewquery.com/content/images/2020/04/google-logo-1.jpg" />
+    <meta property="article:published_time" content="2020-04-21T20:06:00.000Z" />
+    <meta property="article:modified_time" content="2021-08-13T17:15:18.000Z" />
+    <meta property="article:tag" content="Company Guides" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Google Data Science Interview Questions and Solutions" />
+    <meta name="twitter:description" content="Google asks about 5+ different topics in data science spanning machine learning, statistics &amp; probability, product &amp; business, and coding." />
+    <meta name="twitter:url" content="https://www.interviewquery.com/blog-google-data-science-interview-questions-and-solutions" />
+    <meta name="twitter:image" content="https://blog.interviewquery.com/content/images/2020/04/google-logo-1.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Jay Feng" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Company Guides" />
+    <meta name="twitter:site" content="@tryghost" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Interview Query Blog",
+        "url": "https://blog.interviewquery.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.interviewquery.com/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jay Feng",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://blog.interviewquery.com/content/images/2020/03/jays_face.jpg",
+            "width": 400,
+            "height": 400
+        },
+        "url": "https://blog.interviewquery.com/author/jay/",
+        "sameAs": []
+    },
+    "headline": "Google Data Science Interview Questions and Solutions",
+    "url": "https://blog.interviewquery.com/blog-google-data-science-interview-questions-and-solutions/",
+    "datePublished": "2020-04-21T20:06:00.000Z",
+    "dateModified": "2021-08-13T17:15:18.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.interviewquery.com/content/images/2020/04/google-logo-1.jpg",
+        "width": 1200,
+        "height": 800
+    },
+    "keywords": "Company Guides",
+    "description": "Google asks about 5+ different topics in data science spanning machine learning, statistics &amp; probability, product &amp; business, and coding. ",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.interviewquery.com/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.12" />
+    <link rel="alternate" type="application/rss+xml" title="Interview Query Blog" href="https://blog.interviewquery.com/rss/" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.8.0/umd/portal.min.js" data-ghost="https://blog.interviewquery.com/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141783097-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141783097-1');
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.2/tocbot.min.css" integrity="sha512-SFw7k74K3983tyOlJIHa8atr9Ppef3Kix5cmifwzU7ZdtU2E0FRuOVRtd3ENpMJ8sNCie5hlb/0j23efcdQJXA==" crossorigin="anonymous" />
+<style>:root {--ghost-accent-color: #15171A;}</style>
+
+</head>
+<body class="post-template tag-company">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header">
+    <div class="outer site-nav-main">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left-wrapper">
+        <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://www.interviewquery.com/blog">Interview Query Blog</a>
+            <div class="site-nav-content">
+                    <ul class="nav">
+    <li class="nav-home"><a href="https://www.interviewquery.com">Home</a></li>
+    <li class="nav-problems"><a href="https://www.interviewquery.com/tryquestion">Problems</a></li>
+    <li class="nav-course"><a href="https://www.interviewquery.com/courses/data-science-course">Course</a></li>
+    <li class="nav-pricing"><a href="https://www.interviewquery.com/pricing">Pricing</a></li>
+    <li class="nav-blog"><a href="https://www.interviewquery.com/blog">Blog</a></li>
+</ul>
+
+                    <span class="nav-post-title dash">Google Data Science Interview Questions and Solutions</span>
+            </div>
+        </div>
+    </div>
+    <div class="site-nav-right">
+            <ul class="nav">
+    <li class="nav-success-stories"><a href="https://www.interviewquery.com/tag/interviews/">Success Stories</a></li>
+    <li class="nav-company-guides"><a href="https://www.interviewquery.com/tag/company/">Company Guides</a></li>
+    <li class="nav-interviewing-guides"><a href="https://www.interviewquery.com/tag/interviewing-guides/">Interviewing Guides</a></li>
+</ul>
+
+
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+    </div>
+</nav>
+    </div>
+</div></header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-company ">
+
+            <header class="post-full-header">
+
+                <section class="post-full-tags">
+                    <a href="/tag/company/">Company Guides</a>
+                </section>
+
+                <h1 id="post-title" class="post-full-title">Google Data Science Interview Questions and Solutions</h1>
+
+                <p class="post-full-custom-excerpt">Google asks about 5+ different topics in data science spanning machine learning, statistics &amp; probability, product &amp; business, and coding. </p>
+
+                <div class="post-full-byline"> 
+
+                    <section class="post-full-byline-content">
+
+                        <ul class="author-list">
+                            <li class="author-list-item">
+
+                                <div class="author-card">
+                                    <img class="author-profile-image" src="/content/images/size/w100/2020/03/jays_face.jpg" alt="Jay Feng" />
+                                    <div class="author-info">
+                                        <div class="bio">
+                                            <h2>Jay Feng</h2>
+                                            <p>Jay has worked in data science in Silicon Valley for the past five years before starting Interview Query, a data science interview prep newsletter.</p>
+                                            <p><a href="/author/jay/">More posts</a> by Jay Feng.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="/author/jay/" class="author-avatar">
+                                    <img class="author-profile-image" src="/content/images/size/w100/2020/03/jays_face.jpg" alt="Jay Feng" />
+                                </a>
+
+                            </li>
+                        </ul>
+
+                        <section class="post-full-byline-meta">
+                            <h4 class="author-name"><a href="/author/jay/">Jay Feng</a></h4>
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2020-04-21">21 Apr 2020</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 5 min read</span>
+                            </div>
+                        </section>
+                    </section>
+
+                </div>
+            </header>
+
+            <figure class="post-full-image">
+                <img
+                    srcset="/content/images/size/w300/2020/04/google-logo-1.jpg 300w,
+                            /content/images/size/w600/2020/04/google-logo-1.jpg 600w,
+                            /content/images/size/w1000/2020/04/google-logo-1.jpg 1000w,
+                            /content/images/size/w2000/2020/04/google-logo-1.jpg 2000w"
+                    sizes="(max-width: 800px) 400px,
+                        (max-width: 1170px) 1170px,
+                            2000px"
+                    src="/content/images/size/w2000/2020/04/google-logo-1.jpg"
+                    alt="Google Data Science Interview Questions and Solutions"
+                />
+            </figure>
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p></p><h3 id="table-of-contents"><strong><strong>Table of Contents</strong></strong></h3><!--kg-card-begin: html--><aside class="toc"></aside><!--kg-card-end: html--><hr><h2 id="introduction">Introduction</h2><p>The Google data science interview questions comprise of both behavioral and technical problems. Most of the behavioral questions are centered around how the candidate fits in with Google's work culture. The technical questions span multiple topics in data science knowledge. </p><h2 id="google-behavioral-interview-questions">Google Behavioral Interview Questions</h2><p>The <a href="https://www.interviewquery.com/blog-tackling-data-science-behavioral-interview-questions">behavioral interview questions</a> usually occur in the recruiter screen and throughout the onsite interview. </p><p>Questions in the recruiting screen would be like <em>would you like to work with small or large teams</em> or <em>what direction you see your career moving in.</em></p><p><strong>Example Behavioral Interview Questions</strong></p><ul><li>Describe a past data science based project.</li><li>How do you sort priorities when engaged in multitasking.</li></ul><h2 id="google-technical-interview-questions">Google Technical Interview Questions</h2><p>Google asks about 5+ different topics in data science spanning machine learning, statistics &amp; probability, product &amp; business, and coding. </p><p>Generally there is a <strong>high emphasis in statistics and coding interview questions</strong>. Many times they ask a question that combines both concepts. <a href="https://www.interviewquery.com/blog-python-data-science-interview-questions">Read more about statistical coding questions here</a>. <a href="https://blog.interviewquery.com/blog-statistics-ab-testing-interview-questions/">Or learn more about the statistics and A/B testing portion of the interview here.</a> </p><h3 id="machine-learning">Machine Learning</h3><ul><li><em>What is the difference between K-mean and EM?</em></li><li><em>Why use feature selection? If two predictors are highly correlated, what is the effect on the coefficients in the logistic regression? What are the confidence intervals of the coefficients?</em></li><li><em>What is the function of p-values in high dimensional linear regression?</em></li></ul><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://www.interviewquery.com/blog-machine-learning-interview-questions/"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Machine Learning Interview Questions</div><div class="kg-bookmark-description">Machine learning and modeling interview questions cover some of the most basic fundamentals in data science</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://blog.interviewquery.com/favicon.ico" alt=""><span class="kg-bookmark-author">Interview Query Blog</span><span class="kg-bookmark-publisher">Jay Feng</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://blog.interviewquery.com/content/images/2021/01/ML-Data-Science-Interview-Questions.png" alt=""></div></a></figure><h3 id="statistics-probability">Statistics &amp; <a href="https://www.interviewquery.com/blog-probability-interview-questions">Probability</a></h3><ul><li><em>For a sample size of N, the margin of error is 3. How many more samples do we need for the margin of error to hit 0.3?</em></li><li><em>What is the assumption of error in linear regression?</em></li><li><em>How can you tell if a given coin is biased?</em></li><li><em>Explain how a probability distribution could be not normal and give an example scenario.</em></li><li><em>You have a deck and you take one card at random and guess what the card is. What is the probability you guess right?</em></li><li><em>What is the difference between parametric and non-parametric testing?</em></li></ul><h3 id="product-business">Product &amp; Business</h3><ul><li><em>How would you detect inappropriate content on Youtube?</em></li><li><em>How do you test if a new feature has increased engagement in Google's ecosystem?</em></li><li><em>If the outcome of an experiment results in one group clicking 5% more than the other, is that a good result?</em></li></ul><blockquote>Check out our strategies for <a href="https://www.interviewquery.com/blog-product-data-science-interview">tackling product data science interview questions</a></blockquote><h3 id="programming">Programming</h3><ul><li><em>Write a function to generate N samples from a normal distribution and plot the histogram.</em></li></ul><h2 id="google-data-science-onsite-interview">Google Data Science Onsite Interview</h2><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.interviewquery.com/content/images/2020/04/image-4.png" class="kg-image" alt="Google data science products" loading="lazy"><figcaption>Focus on Google's different apps and products</figcaption></figure><p>The data science onsite interview panel will look like this:</p><ul><li><strong>Business case study:</strong> Questions are mainly case-study type involving real-life Google problems. The interviewer may ask you to then write a query to analyze the business case study using SQL.</li><li><strong>Applied statistics and ML interview:</strong> This interview covers statistical concepts and modeling questions as well as a related coding question. </li><li><strong>Product Metrics:</strong> This interview covers a product case study. It will be a deep dive into a product and how to analyze success of a feature or debug what might be happening in the data. </li><li><strong>Leadership and Product Sense Interview:</strong> This interview assesses your leadership skills. The aim here is to understand how you leverage your communication and decision-making to influence others. </li><li><strong>Googlyness Interview:</strong> This interview is basically about how well you work with others, help team members achieved team goals, how you can navigate workplace ambiguity, and how well you can work under pressure</li></ul><h3 id="notes-and-tips">Notes and Tips</h3><ul><li>It is of worth to note that Google questions are <strong>standardized and rely heavily on situational scenarios with their products</strong>. Study Google's large breadth of products and understand how you would personally improve or test them. </li><li>Google’s data science interview aims to determine the level of domain knowledge you possess how you could provide business-driving insights. Brush up on your knowledge of statistics and probability given these questions can be some of the hardest to solve. </li><li>There are four general attributes that Google looks for in candidates. First is the <strong>general cognitive ability</strong>, which screens based on how candidates can learn and adapt to new situations. The second is <strong>role-related knowledge</strong> which is based on background, skillsets, and experience that are specific and relevant to the roles. The third is the <strong>leadership</strong> attribute. Google’s core culture is about building a team of high performers individuals who are great team players and can one day step into leadership roles. The fourth and last attribute is the <strong>Googlyness</strong>, to ensure candidate succeed in their roles. Google assesses on “comfort with ambiguity”, “bias to action”, and a “collaborative nature” [1].</li><li>Google at its core has an employee-focused culture. It has a corporate culture that motivates employees to share information cross-functionally to support innovation that enables it to maintain its competitiveness. This ecosystem ensures that every employee maintains competitiveness and innovativeness through training and informally through personalized leadership and management support.</li></ul><h2 id="example-google-data-science-interview-question-and-solution">Example Google Data Science Interview Question and Solution</h2><p><strong>Question: </strong></p><p>Given three random variables independent and identically distributed from a uniform distribution of 0 to 4, what is the probability that the median is greater than 3?</p><p><strong>Solution:</strong></p><p>If we break down this question, we'll find that another way to phrase it is to ask what the probability is that <strong>at least two of the variables are larger than 3.</strong></p><p>For example, if look at the combination of events that satisfy the condition, the events can actually be divided into two exclusive events.</p><p><strong>Event A:</strong> All three random variables are larger than 3.<br><strong>Event B:</strong> One random variable is smaller than 3 and two are larger than 3.</p><p>Given these two events satisfy the condition of the median &gt; 3, we can now calculate the probability of both of the events occuring. The question can now be rephrased as <strong>P(Median &gt; 3) = P(A) + P(B).</strong></p><p>Let's calculate the probability of the event A. The probability that a random variable &gt; 3 but less than 4 is equal to 1/4. So the probability of event A is:</p><p><strong>P(A) = (1/4) * (1/4) * (1/4) = 1/64</strong></p><p>The probability of event B is that two values must be greater than 3, but one random variable is smaller than 3. We can calculate this the same way as the calculating the probability of A. The probability of a value being greater than 3 is 1/4 and the probability of a value being less than 3 is 3/4. Given this has to occur three times we multiply the condition three times.</p><p><strong>P(B) = 3 * ((3/4) * (1/4) * (1/4)) = 9/64</strong></p><p>Therefore the total probability is P(A)+P(B) = 1/64 + 9/64 = <strong>10/64</strong></p><h3></h3>
+                </div>
+
+            </section>
+
+            
+                <section class="subscribe-form">
+    <h3 class="subscribe-form-title">Want more interview questions?</h3>
+    <p class="subscribe-form-description">Practice data science interview questions from top tech companies delivered right to your inbox each weekday</p>
+    <form id="iq-subscribe-form">
+        <div class="form-group">
+            <input id="footer-subscribe-email" class="subscribe-email" type="email" name="email" data-members-email placeholder="Enter your email..." autocomplete="false" />
+            <button class="button primary" type="submit">
+                <span class="button-content">Subscribe</span>
+                <span class="button-loader"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+    <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+    <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+C22.32,8.481,24.301,9.057,26.013,10.047z">
+        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20"
+            dur="0.5s" repeatCount="indefinite" />
+    </path>
+</svg></span>
+            </button>
+        </div>
+        <div id="form-signup-success" class="message-success">
+            <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+        </div>
+        <div id="form-signup-fail" class="message-error">
+            Please enter a valid email address!
+        </div>
+    </form>
+</section>            
+
+            <section>
+            <script>
+            function shareFB(e){
+                const fbURL = `https://www.facebook.com/sharer.php?u=${window.location.href}`
+                window.open(fbURL, "_blank");
+                return false;
+            }
+            function shareLI(e) {
+                const title = document.getElementById("post-title").innerHTML;
+                const linkedinURL = `https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}&title=${encodeURIComponent(title)}&source=InterviewQuery`
+                window.open(linkedinURL, "_blank");
+                return false;
+            }
+            function shareTWTR(e) {
+                const pageUrl = window.location.href;
+                const title = document.getElementById("post-title").innerHTML;
+                const twitterURL = `https://twitter.com/intent/tweet?url=${pageUrl}&amp;text=${encodeURIComponent(title)}&amp;via=InterviewQuery`
+                window.open(twitterURL, "_blank");
+                return false;
+            }
+            </script>
+            <div>
+                <h3>share</h3>
+                <a class="social-share-icon" style="margin-right: 10px;" aria-label="Share on Facebook" href="javascript:shareFB()" ><svg class="icon icon--facebook icon--white" fill="#4267b2" height="24px" viewBox="0 0 20 20" version="1.1" aria-labelledby="title"><title>facebook</title><path d="M11,7.2h4.3v2.6H11V20H7.8V9.8H4V7.2h3.8V3.7c0-2,1.6-3.7,3.7-3.7h3.8v2.7h-2.9c-0.7,0-1.4,0.7-1.4,1.5V7.2z"></path></svg></a>
+                <a class="social-share-icon" style="margin-right: 10px;"  aria-label="Share on Twitter" href="javascript:shareTWTR()"><svg class="icon icon--twitter icon--white" fill="rgb(29, 161, 242)" height="24px" viewBox="0 0 20 20" version="1.1" aria-labelledby="title"><title>twitter</title><path d="M20,4c-0.7,0.3-1.5,0.6-2.4,0.7c0.9-0.5,1.5-1.4,1.8-2.3c-0.8,0.5-1.7,0.8-2.6,1C16.1,2.5,15,2,13.8,2c-2.3,0-4.1,1.9-4.1,4.2c0,0.3,0,0.7,0.1,1C6.4,7,3.4,5.4,1.4,2.9C1,3.5,0.8,4.1,0.8,4.9c0,1.4,0.7,2.7,1.8,3.5C2,8.4,1.4,8.2,0.8,7.9v0.1c0,2,1.4,3.7,3.3,4.1c-0.4,0.1-0.7,0.2-1.1,0.2c-0.3,0-0.5,0-0.8-0.1c0.5,1.7,2,2.9,3.8,2.9c-1.4,1.1-3.2,2-5.1,2c-0.3,0-0.7,0-1-0.1c1.8,1.2,4,1.7,6.3,1.7c7.5,0,11.7-6.4,11.7-12V6.1C18.8,5.6,19.4,4.8,20,4z"></path></svg></a>
+                <a class="social-share-icon" style="margin-right: 10px;" aria-label="Share on LinkedIn" href="javascript:shareLI()" ><svg class="icon icon--linkedin icon--white" viewBox="0 0 20 20" version="1.1" fill="#0073b1" height="24px" aria-labelledby="title"><title>linkedin</title><path d="M0.4,6.4v12.5h4.2V6.4H0.4z M11.2,11.7c0-1.6,1.1-2.4,2.3-2.4s2.3,0.8,2.3,2.8v6.9H20v-7.3C20,8.1,17.9,6,15,6c-1.7,0-2.9,0.9-3.8,2.1l-0.1-1.7H7C7,6.9,7,9.3,7,9.3v9.7h4.2V11.7z M2.4,4.4C4,4.4,5,3.4,5,2.2C4.9,1,4,0,2.5,0C0.9,0-0.1,1-0.1,2.2C-0.1,3.4,0.9,4.4,2.4,4.4L2.4,4.4z"></path></svg></a>
+            </div>
+</section>        </article>
+        <aside class="toc-container">
+               <div class="toc"></div>
+           </aside>
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card">
+                    <header class="read-next-card-header">
+                        <h3><span>More in</span> <a href="/tag/company/">Company Guides</a></h3>
+                    </header>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li>
+                                <h4><a href="/blog-the-linkedin-data-scientist-interview/">LinkedIn Data Science Interview Questions and Solutions</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2021-08-05">5 Aug 2021</time> –
+                                        9 min read</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h4><a href="/blog-facebook-data-science-interview-questions-and-solutions/">Facebook Data Science Interview Questions and Solutions</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2021-07-28">28 Jul 2021</time> –
+                                        13 min read</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h4><a href="/blog-amazon-data-engineer-salary/">Amazon Data Engineer Salaries and Analysis</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2021-06-04">4 Jun 2021</time> –
+                                        2 min read</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="/tag/company/">See all 37 posts
+                            →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-interviews ">
+
+    <a class="post-card-image-link" href="/blog-finding-a-data-science-job-in-a-pandemic-with-jenetta/">
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/2020/04/jennetta_ds-1.png 300w,
+                    /content/images/size/w600/2020/04/jennetta_ds-1.png 600w,
+                    /content/images/size/w1000/2020/04/jennetta_ds-1.png 1000w,
+                    /content/images/size/w2000/2020/04/jennetta_ds-1.png 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
+            src="/content/images/size/w600/2020/04/jennetta_ds-1.png"
+            alt="Finding a Data Science Job in a Pandemic"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/blog-finding-a-data-science-job-in-a-pandemic-with-jenetta/">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">Interviews</div>
+                <h2 class="post-card-title">Finding a Data Science Job in a Pandemic</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>Once the pandemic hit there was a massive hiring freeze and the opportunities started getting canceled left and right</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Jay Feng
+                    </div>
+            
+                    <a href="/author/jay/" class="static-avatar">
+                        <img class="author-profile-image" src="/content/images/size/w100/2020/03/jays_face.jpg" alt="Jay Feng" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/author/jay/">Jay Feng</a></span>
+                <span class="post-card-byline-date"><time datetime="2020-04-26">26 Apr 2020</time> <span class="bull">&bull;</span> 5 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+
+                <article class="post-card post tag-company ">
+
+    <a class="post-card-image-link" href="/blog-the-google-data-scientist-interview/">
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/2020/04/google-data-tech-analytics2-ss-1920.jpg 300w,
+                    /content/images/size/w600/2020/04/google-data-tech-analytics2-ss-1920.jpg 600w,
+                    /content/images/size/w1000/2020/04/google-data-tech-analytics2-ss-1920.jpg 1000w,
+                    /content/images/size/w2000/2020/04/google-data-tech-analytics2-ss-1920.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            loading="lazy"
+            src="/content/images/size/w600/2020/04/google-data-tech-analytics2-ss-1920.jpg"
+            alt="The Google Data Scientist Interview"
+        />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/blog-the-google-data-scientist-interview/">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">Company Guides</div>
+                <h2 class="post-card-title">The Google Data Scientist Interview</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>Data scientists at Google work across a wide facet of teams, products, and features, from enhancing advertising efficacy to network infrastructure optimization.</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Jay Feng
+                    </div>
+            
+                    <a href="/author/jay/" class="static-avatar">
+                        <img class="author-profile-image" src="/content/images/size/w100/2020/03/jays_face.jpg" alt="Jay Feng" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/author/jay/">Jay Feng</a></span>
+                <span class="post-card-byline-date"><time datetime="2020-04-21">21 Apr 2020</time> <span class="bull">&bull;</span> 6 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+        </div>
+    </div>
+
+</aside>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://blog.interviewquery.com">Interview Query Blog</a> &copy; 2021</section>
+                <nav class="site-footer-nav">
+                    <a href="https://blog.interviewquery.com">Latest Posts</a>
+                    <a href="https://www.facebook.com/ghost" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/tryghost" target="_blank" rel="noopener">Twitter</a>
+                    
+                </nav>
+            </div>
+            <div>
+                <style type="text/css">
+                    .iq-subscribe-btn {
+                        cursor: pointer;
+                        color: #333;
+                    }
+                    #iq-sub-email {
+                        color: #333;
+                    }
+                    .err-msg {
+                        color: red;
+                    }
+                    .success-msg {
+                        color: green;
+                    }
+                    .hide {
+                        display: none;
+                    }
+                </style>
+                <div class="success-msg hide">
+                        <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+                    </div>
+                    <div class="err-msg hide">
+                        Please enter a valid email address!
+                    </div>
+                <input id="iq-sub-email" type="email" placeholder="email@address.com" />
+                <button class="iq-subscribe-btn">
+                    Subscribe
+                </button>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="subscribe-success-message">
+        <a class="subscribe-close" href="javascript:;"></a>
+        You've successfully subscribed to Interview Query Blog!
+    </div>
+
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-close-overlay" href="#"></a>
+        <a class="subscribe-close-button" href="#"></a>
+        <div class="subscribe-overlay-content">
+            <div class="subscribe-form">
+                <h1 class="subscribe-overlay-title">Subscribe to Interview Query Blog</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest & greatest posts delivered straight to your inbox</p>
+                <form data-members-form="subscribe">
+                    <div class="form-group">
+                        <input class="subscribe-email" data-members-email placeholder="youremail@example.com"
+                            autocomplete="false" />
+                        <button class="button primary" type="submit">
+                            <span class="button-content">Subscribe</span>
+                            <span class="button-loader"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+    <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+    <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+C22.32,8.481,24.301,9.057,26.013,10.047z">
+        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20"
+            dur="0.5s" repeatCount="indefinite" />
+    </path>
+</svg></span>
+                        </button>
+                    </div>
+                    <div class="message-success">
+                        <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+                    </div>
+                    <div class="message-error">
+                        Please enter a valid email address!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="/assets/built/casper.js?v=24bf54caf4"></script>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+
+        $(document).ready(function () {
+            if (action == 'subscribe') {
+                $('body').addClass("subscribe-success");
+            }
+
+            $('.subscribe-success-message .subscribe-close').click(function () {
+                $('.subscribe-success-message').addClass('close');
+            });
+
+            // Reset form on opening subscrion overlay
+            $('.subscribe-button').click(function() {
+                $('.subscribe-overlay form').removeClass();
+                $('.subscribe-email').val('');
+            });
+        });
+    </script>
+     <script type="text/javascript">
+                    (function(){
+                        $('.iq-subscribe-btn').click(function(){
+                            const $input = $('#iq-sub-email');
+                            const email = $input.val();
+                            if (email === '' || email.includes('@') === false) {
+                                $('.err-msg').removeClass('hide');
+                                $input.val('');
+                                setTimeout(function(){
+                                    $('.err-msg').addClass('hide')
+                                }, 2000)
+                                return;
+                            }
+                            const url = new URL('https://www.interviewquery.com/get-started');
+                            url.searchParams.set('email', email);
+                            console.log(url.toString())
+                            fetch(url.toString()).then(function(resp){
+                                if (resp.ok) {
+                                    $('.success-msg').removeClass('hide');
+                                }
+                            })
+                        })
+                    })();
+                </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+    <script>
+        tocbot.init({
+            tocSelector: '.toc',
+            contentSelector: '.post-content',
+            hasInnerContainers: true
+        });
+    </script>
+    <script type="text/javascript">
+    (function(){
+        $('#iq-subscribe-form').submit(function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('submitting');
+            const iqUrl= "https://www.interviewquery.com/get-started";
+            const email = $('#footer-subscribe-email').val();
+            $.ajax(`${iqUrl}/?email=${email}`).done(function() {
+                console.log('we are here');
+                $('#form-signup-success').attr('style','display: block !important');
+                setTimeout(function(){
+                    $('#form-signup-success').attr('style','');
+                }, 2000);
+              })
+              .fail(function() {
+                $('#form-signup-fail').attr('style','display: block !important');
+                setTimeout(function(){
+                    $('#form-signup-fail').attr('style','');
+                }, 2000);
+              })
+        })
+    })();
+</script>
+<script>
+    $(document).ready(function () {
+        // FitVids - start
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+        // FitVids - end
+
+        // Replace nav with title on scroll - start
+        Casper.stickyNavTitle({
+            navSelector: '.site-nav-main',
+            titleSelector: '.post-full-title',
+            activeClass: 'nav-post-title-active'
+        });
+        // Replace nav with title on scroll - end
+
+        // Hover on avatar
+        var hoverTimeout;
+        $('.author-list-item').hover(function () {
+            var $this = $(this);
+
+            clearTimeout(hoverTimeout);
+
+            $('.author-card').removeClass('hovered');
+            $(this).children('.author-card').addClass('hovered');
+
+        }, function () {
+            var $this = $(this);
+
+            hoverTimeout = setTimeout(function () {
+                $this.children('.author-card').removeClass('hovered');
+            }, 800);
+        });
+    });
+</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.2/tocbot.min.js" integrity="sha512-7UTycJFXmNG9IKkkV5JWoexFWByJK1mrmn91iIJXst84COVlQzAz5nZ9P/q7L1nvj7Xjtjx6FMlbMeb6svpn/w==" crossorigin="anonymous"></script>
+<script>
+    tocbot.init({
+        tocSelector: '.toc',
+        contentSelector: '.post-content',
+        hasInnerContainers: true
+    });
+</script>
+
+</body>
+</html>
